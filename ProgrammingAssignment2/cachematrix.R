@@ -1,3 +1,4 @@
+
 ## This function calculate the inverse of the matrix, and store it in cache 
 ## If the inverse is already calculated i.e if the matrix is unchanged,
 ## then the same inverse is displayed from the cache
@@ -6,17 +7,17 @@
 ##the value of the inverse of the matrix 
 
 makeCacheMatrix <- function(x = matrix()) {
-    i <- NULL
-    set <- function(y) {
-      x <<- y
-      i <<- NULL
-    }
-    get <- function() x
-    setinverse <- function(inverse) i <<- inverse
-    getinverse <- function() i
-    list(set = set, get = get,
-         setinverse = setinverse,
-         getinverse = getinverse)
+  i <- NULL
+  set <- function(y) {
+    x <<- y
+    i <<- NULL
+  }
+  get <- function() x
+  setinverse <- function(inverse) i <<- inverse
+  getinverse <- function() i
+  list(set = set, get = get,
+       setinverse = setinverse,
+       getinverse = getinverse)
 }
 
 
@@ -34,3 +35,4 @@ cacheSolve <- function(x, ...) {
   x$setinverse(i)
   i
 }
+
